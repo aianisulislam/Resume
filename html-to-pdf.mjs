@@ -5,7 +5,6 @@ import { chromium } from "playwright";
 
 const rootDir = process.cwd();
 const inputFile = process.argv[2] ?? "resume.html";
-const outputFile = process.argv[3] ?? "resume.pdf";
 const port = 4173;
 
 const contentTypes = {
@@ -42,17 +41,25 @@ server.listen(port, async () => {
       waitUntil: "networkidle",
     });
 
+    const title = await page.title();
+    const outputFile =
+      process.argv[3] ??
+      `${title
+        .trim()
+        .replace(/[<>:"/\\|?*\u0000-\u001F]/g, "_")
+        .replace(/\s+/g, "_")}.pdf`;
+
     await page.pdf({
       path: join(rootDir, outputFile),
-      format: "Letter",
+      format: "A4",
       landscape: false,
       printBackground: false,
       displayHeaderFooter: false,
       margin: {
         top: "0.25in",
         bottom: "0.25in",
-        left: "0.5in",
-        right: "0.5in",
+        left: "0.25in",
+        right: "0.25in",
       },
     });
   } finally {
