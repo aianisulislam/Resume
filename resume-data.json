@@ -90,9 +90,12 @@
       "target": "Workplaces & Institutions",
       "tenure": "06/2018 - 05/2022",
       "responsibilities": [
+        "Joined as a day-0 engineer before Hipla was spun out as a standalone company, and helped shape the product and engineering foundations from its earliest stage",
         "Led end-to-end product engineering for The Sentinel - a customisable, multi-module SaaS security and operations suite, taken from concept through architecture, development, and production deployment",
+        "Drove 0-to-1 engineering across multiple products and product suites, turning early concepts into production systems that reached market adoption and commercial viability",
         "Delivered Hipla SmartSchool, a real-time indoor location tracking system achieving sub-1-metre accuracy, built in close collaboration with IoT hardware and data engineering teams",
         "Re-architected Hipla SmartOffice from a single-tenant application into a scalable multi-tenant SaaS platform using the MERN stack, enabling the product to serve multiple enterprise clients from a shared infrastructure",
+        "Led engineering execution needed to take key offerings to market, working closely with stakeholders to balance speed, product fit, and long-term maintainability",
         "Introduced monitoring, test-driven development practices, and microservices patterns to a team that had previously operated without formal engineering processes"
       ]
     }
