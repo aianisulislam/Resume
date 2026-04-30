@@ -1,0 +1,57 @@
+name: Build Resume PDF
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "resume-data.json"
+      - "resume.html"
+      - "html-to-pdf.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/build-resume.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "resume-data.json"
+      - "resume.html"
+      - "html-to-pdf.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/build-resume.yml"
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate PDF
+        run: npm run pdf
+
+      - name: List generated files
+        run: ls -1 *.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: "*.pdf"
+          if-no-files-found: error
