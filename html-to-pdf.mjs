@@ -13,6 +13,7 @@ const contentTypes = {
   ".js": "text/javascript; charset=utf-8",
   ".mjs": "text/javascript; charset=utf-8",
   ".css": "text/css; charset=utf-8",
+  ".ttf": "font/ttf",
 };
 
 const server = http.createServer((request, response) => {
@@ -40,6 +41,7 @@ server.listen(port, async () => {
     await page.goto(`http://127.0.0.1:${port}/${inputFile}`, {
       waitUntil: "networkidle",
     });
+    await page.evaluateHandle("document.fonts.ready");
 
     const title = await page.title();
     const outputFile =

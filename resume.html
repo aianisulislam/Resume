@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Md_Anisul_Islam_resume</title>
     <style>
+      @font-face {
+        font-family: "Resume Georgia";
+        src: url("./fonts/georgia.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "Resume Georgia";
+        src: url("./fonts/georgiab.ttf") format("truetype");
+        font-style: normal;
+        font-weight: 700;
+      }
+
       body {
         line-height: 1.35;
-        font-family: Georgia, serif;
+        font-family: "Resume Georgia", Georgia, serif;
         font-variant-numeric: lining-nums tabular-nums;
         font-feature-settings: "lnum";
         font-size: 14px;
@@ -57,7 +71,7 @@
       body.appendChild(document.createElement("p")).innerHTML =
         `<strong>${data.title}</strong>`;
       body.appendChild(document.createElement("p")).innerHTML =
-        `${data.location} • <span style="font-family: serif">${data.phone}</span> • ${data.email} • linkedin.com/${data.linkedin}`;
+        `${data.location} • <span>${data.phone}</span> • ${data.email} • linkedin.com/${data.linkedin}`;
       body.appendChild(document.createElement("hr"));
       body.appendChild(document.createElement("h2")).textContent =
         "PROFESSIONAL SUMMARY";
