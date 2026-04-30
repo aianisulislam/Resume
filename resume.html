@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Md_Anisul_Islam_resume</title>
+    <style>
+      body {
+        line-height: 1.35;
+        font-family: Georgia, serif;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "lnum";
+        font-size: 14px;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1 {
+        margin-bottom: 4px;
+      }
+      h2 {
+        margin-top: 14px;
+        margin-bottom: 4px;
+        font-size: 18px;
+      }
+      h3 {
+        margin-top: 4px;
+        margin-bottom: 2px;
+      }
+      p {
+        margin: 2px 0;
+      }
+      ul {
+        margin: 4px 0 18px 14px;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const renderList = (items) => {
+      const ul = document.createElement("ul");
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+      return ul;
+    };
+    const renderResume = (data) => {
+      const body = document.body;
+      body.appendChild(document.createElement("h1")).textContent = data.name;
+      body.appendChild(document.createElement("p")).innerHTML =
+        `<strong>${data.title}</strong>`;
+      body.appendChild(document.createElement("p")).innerHTML =
+        `${data.location} • <span style="font-family: serif">${data.phone}</span> • ${data.email} • linkedin.com/${data.linkedin}`;
+      body.appendChild(document.createElement("hr"));
+      body.appendChild(document.createElement("h2")).textContent =
+        "PROFESSIONAL SUMMARY";
+      body.appendChild(document.createElement("p")).innerHTML =
+        data.professionalSummary;
+      body.appendChild(document.createElement("h2")).textContent =
+        "TECHNICAL SKILLS";
+      data.technicalSkills.forEach((skill) => {
+        body.appendChild(document.createElement("p")).innerHTML =
+          `<strong>${skill.title}:</strong> ${skill.details}`;
+      });
+      body.appendChild(document.createElement("h2")).textContent =
+        "WORK EXPERIENCE";
+      data.workExperience.forEach((job) => {
+        body.appendChild(document.createElement("h3")).textContent = job.title;
+        body.appendChild(document.createElement("p")).innerHTML =
+          `<strong>${job.tenure} | ${job.company} | ${job.description} | ${job.target}</strong>`;
+        body.appendChild(renderList(job.responsibilities));
+      });
+      body.appendChild(document.createElement("h2")).textContent =
+        "ADDITIONAL EXPERIENCE";
+      data.additionalExperience.forEach((exp) => {
+        body.appendChild(document.createElement("p")).innerHTML =
+          `<strong>${exp.title}</strong> - ${exp.tenure}`;
+      });
+      body.appendChild(document.createElement("h2")).textContent = "EDUCATION";
+      data.education.forEach((edu) => {
+        body.appendChild(document.createElement("p")).innerHTML =
+          `${edu.tenure} - ${edu.status} ${edu.title} <br /> - ${edu.institution}`;
+      });
+    };
+
+    const loadResume = async () => {
+      try {
+        const response = await fetch("./resume-data.json");
+        if (!response.ok) {
+          throw new Error(`Failed to load resume data: ${response.status}`);
+        }
+        const data = await response.json();
+        renderResume(data);
+      } catch (error) {
+        document.body.appendChild(document.createElement("p")).textContent =
+          "Unable to load resume data. Serve this folder through a local web server so the JSON file can be fetched.";
+        console.error(error);
+      }
+    };
+
+    loadResume();
+  </script>
+</html>

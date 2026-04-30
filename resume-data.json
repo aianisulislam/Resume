@@ -1,0 +1,124 @@
+{
+  "name": "Md Anisul Islam",
+  "title": "Technical Lead | Senior Software Engineer",
+  "location": "Bengaluru, Karnataka",
+  "phone": "+91-78965-62807",
+  "email": "aianisulislam@gmail.com",
+  "linkedin": "in/aianisulislam",
+  "professionalSummary": "Technical Lead and Senior Software Engineer with 7 years of experience across the full arc of product engineering, from zero-to-one builds to scaling regulated production systems. Operated across healthcare AI, cybersecurity, IoT, and e-commerce, consistently working at the intersection of architecture, delivery, and cross-functional leadership. Comfortable owning complex systems end-to-end, making defensible architectural decisions under constraints, and bridging the gap between executive product vision and engineering execution. Strong practitioner of AI-assisted engineering workflows, with a proven instinct for setting the right delegation boundaries, task granularity, and review checkpoints to maximise speed without letting quality drift. Hands-on by default; managerial by necessity.",
+  "technicalSkills": [
+    {
+      "title": "Architecture & Systems",
+      "details": "Distributed systems, microservices, micro-frontends, multi-tenant SaaS, serverless architectures, event-driven systems, real-time platforms, cloud-native design"
+    },
+    {
+      "title": "Backend",
+      "details": "Node.js, NestJS, REST & async API design, job schedulers, cloud functions, OAuth2 / SAML / JWT, third-party integrations, secure data handling"
+    },
+    {
+      "title": "Frontend & Mobile",
+      "details": "React, Next.js, React Native, Flutter, embedded web views, PWA, TWA"
+    },
+    {
+      "title": "AI-Assisted Engineering",
+      "details": "LLM-assisted development workflows, task decomposition, delegation strategy, review loops, prompt iteration, and balancing throughput with reliability"
+    },
+    {
+      "title": "Cloud & Infrastructure",
+      "details": "AWS (core services), GCP, Infrastructure as Code, CI/CD pipelines, observability & monitoring (New Relic, Sentry, Grafana)"
+    },
+    {
+      "title": "Database & Data Systems",
+      "details": "PostgreSQL, MongoDB, MySQL, Redis, Cloud Firestore, Supabase"
+    },
+    {
+      "title": "Security & Compliance",
+      "details": "GDPR, HIPAA, SOC2, VAPT, SBOM optimization, data residency (UK/US), SSO/SAML, incident response"
+    }
+  ],
+  "workExperience": [
+    {
+      "title": "Technical Lead",
+      "company": "Wysa",
+      "description": "AI-powered mental healthcare",
+      "target": "UK & US",
+      "tenure": "08/2025 - 03/2026",
+      "responsibilities": [
+        "Own technical leadership across two independent healthcare products simultaneously - a consumer AI mental health companion operating under NHS and UK GDPR constraints (UK), and a B2B SaaS clinical management platform sold to US hospitals and mental health clinics",
+        "Directly lead a cross-functional organisation of 30 across engineering, QA, content, UI/UX, junior product management, and delivery management - spanning two independent product pods with full reporting responsibility",
+        "Serve as the primary technical bridge between CTO and delivery teams - translating architectural decisions and strategic priorities into executable roadmaps across both pods",
+        "Collaborate directly with COO and product leadership as part of the requirement and roadmap pipeline, ensuring technical feasibility and delivery predictability for compliance-sensitive features",
+        "Lead engineering for the UK product: a proactive AI companion that learns user behaviour, mood patterns, and daily schedules (consent-driven, NHS-compliant) to deliver personalised interventions, and intelligently triages users to NHS-affiliated care with appointment booking and prescription management",
+        "Lead engineering for the US product: a clinical SaaS dashboard for mental health professionals covering patient lifecycle management, scheduling, prescription workflows, EHR-adjacent CRM/ERP integrations, and automated care reporting",
+        "Operationalised AI-assisted development workflows by defining delegation boundaries, task granularity, and review checkpoints that improved delivery efficiency while keeping error-proneness under control",
+        "Own HIPAA and NHS regulatory compliance across both products including data residency, audit trails, and clinical data security",
+        "Drive architectural decisions, production stability, and engineering process improvements across both pods"
+      ]
+    },
+    {
+      "title": "Member of Technical Staff",
+      "company": "Lineaje Inc",
+      "description": "Cybersecurity SaaS",
+      "target": "B2B & B2G",
+      "tenure": "06/2023 - 08/2025",
+      "responsibilities": [
+        "Owned end-to-end architecture and technical governance for multi-tenant SaaS cybersecurity tooling serving enterprise and government clients",
+        "Led a frontend engineering team of 6 while contributing directly as a senior engineer on backend services and AWS infrastructure - maintaining hands-on involvement across the full stack throughout the re-engineering effort",
+        "Led re-engineering of legacy monolithic systems into modular microservices and serverless architecture on AWS, addressing scaling and maintainability constraints that had accumulated over multiple years",
+        "Decoupled tightly coupled services to improve deployment independence, reduce cross-team bottlenecks, and increase release cadence",
+        "Implemented enterprise-grade authentication including SSO/SAML for B2B and B2G client onboarding requirements",
+        "Established observability standards, production monitoring practices, and incident response workflows across the engineering organisation",
+        "Managed sprint planning, cross-team dependency resolution, and engineering quality standards across multiple parallel workstreams"
+      ]
+    },
+    {
+      "title": "Software Development Engineer II",
+      "company": "Sterne India Pvt Ltd (Arzooo)",
+      "description": "Wholesale & distribution e-commerce",
+      "target": "B2B & B2C",
+      "tenure": "05/2022 - 05/2023",
+      "responsibilities": [
+        "Designed and deployed an in-app conversational chatbot system to handle user support flows and reduce manual intervention at scale",
+        "Built a GPS-based field staff tracking system for real-time sales activity and travel monitoring, used by operations teams to improve field productivity",
+        "Contributed to core platform services including dynamic pricing logic and checkout flow enhancements"
+      ]
+    },
+    {
+      "title": "Full Stack Engineer",
+      "company": "Hipla Technologies Pvt Ltd",
+      "description": "IoT & SaaS Platform",
+      "target": "Workplaces & Institutions",
+      "tenure": "06/2018 - 05/2022",
+      "responsibilities": [
+        "Led end-to-end product engineering for The Sentinel - a customisable, multi-module SaaS security and operations suite, taken from concept through architecture, development, and production deployment",
+        "Delivered Hipla SmartSchool, a real-time indoor location tracking system achieving sub-1-metre accuracy, built in close collaboration with IoT hardware and data engineering teams",
+        "Re-architected Hipla SmartOffice from a single-tenant application into a scalable multi-tenant SaaS platform using the MERN stack, enabling the product to serve multiple enterprise clients from a shared infrastructure",
+        "Introduced monitoring, test-driven development practices, and microservices patterns to a team that had previously operated without formal engineering processes"
+      ]
+    }
+  ],
+  "additionalExperience": [
+    {
+      "title": "Co-founder & Creative Head - Tune Your Construction Pvt Ltd",
+      "tenure": "2016 - 2018"
+    },
+    {
+      "title": "Freelance UI/UX & Graphic Designer",
+      "tenure": "2014 - 2018"
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech, Electronics & Instrumentation Engineering",
+      "status": "Studied",
+      "institution": "National Institute of Technology, Silchar",
+      "tenure": "2013 - 2017"
+    },
+    {
+      "title": "AISSCE (Class XII, CBSE)",
+      "status": "Passed",
+      "institution": "Jawahar Navodaya Vidyalaya Kokrajhar, Assam",
+      "tenure": "2012 - 2013"
+    }
+  ]
+}
