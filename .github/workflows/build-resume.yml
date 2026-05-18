@@ -55,3 +55,15 @@ jobs:
           name: resume-pdf
           path: "*.pdf"
           if-no-files-found: error
+
+      - name: Create GitHub Release
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PDF_FILE=$(ls *.pdf | head -1)
+          VERSION="v1.0.${{ github.run_number }}"
+          gh release create "$VERSION" \
+            --title "Resume PDF $VERSION" \
+            --notes "Automated resume build from commit ${{ github.sha }}." \
+            "$PDF_FILE"
